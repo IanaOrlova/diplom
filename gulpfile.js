@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     watch = require('gulp-watch'),
     imagemin = require('gulp-imagemin'),
+    sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
     bs = require('browser-sync').create();
 
 gulp.task('default', ['browsersync', 'watch']);
@@ -19,13 +21,15 @@ gulp.task('browsersync', function () {
 
 gulp.task('watch', function() {
     gulp.watch('sass/*.scss', ['style']);
-    gulp.watch('js/script.js', ['script']);
+    gulp.watch('script/script.js', ['script']);
     bs.watch('*.html').on('change', bs.reload);
 });
 
 gulp.task('style', function() {
     return gulp.src('sass/main.scss', {style : 'expended'})
+        .pipe(sourcemaps.init())
         .pipe(sass({includePaths: ['sass/**']}))
+        .pipe(autoprefixer())
         .pipe(rename({suffix: '.min'}))
         .pipe(minify())
         .pipe(gulp.dest('css/'))
@@ -34,7 +38,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('script', function() {
-    return gulp.src('js/script.js')
+    return gulp.src('script/script.js')
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('js/'))
