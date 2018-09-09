@@ -21,10 +21,13 @@
 
 *{
   margin: 0;
+  font-family: 'MyriadPro-Regular',sans-serif;
 }
+
 body{
   background: #f1f1f1;
 }
+
 ul{
   padding: 0;
   li{
@@ -44,7 +47,14 @@ h3{
   @include h3;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+.active{
+  border-bottom: 2px solid $colorOne ;
 
+}
 
 
 /*                                  first section                              */
@@ -52,18 +62,6 @@ h3{
 .first-section{
   background: url("../img/Баннер.png");
   height: 1031px;
-  img{
-    width: 100%;
-    display: block;
-  }
-  &__content{
-    //position: absolute;
-    //top: 0;
-    //bottom: 0;
-    //left: 50%;
-    //transform: translate(-50%);
-    margin: 0 auto;
-  }
 
   header{
     display: flex;
@@ -83,65 +81,77 @@ h3{
 
     .nav__menu{
       padding-top: 5px;
+
       li{
-        font-family: $fontOne;
         font-size: 18px;
         color:white;
         margin: 0 10px;
+
+        a{
+          padding-bottom: 8px;
+        }
+
       }
 
     }
     .nav__links{
       padding-top: 5px;
+
       li{
         margin: 0 16px;
+
         a{
           color: white;
           transition: 0.5s;
+
           &:hover{
-            color: #e19a00;
-
+            color: $colorOne;
           }
+
         }
+
       }
-    }
-  }
-  .first-section__logo{
-    //background: rgba(9, 49, 81, 0.3);
-    padding-top: 192px;
-    max-width: 573px;
-    margin-left: 23%;
-    img{
-      width: 100%;
+
     }
 
   }
+
+  .first-section__logo{
+    padding-top: 192px;
+    max-width: 574px;
+    margin-left: 23%;
+  }
+
 }
 
-/*                           second section                                          */
+/*                           second section     (white)                                     */
 
 .second-section{
+
   &__content{
     padding-bottom: 195px;
     padding-top: 144px;
+
     .content__row{
       display: flex;
       justify-content: space-around;
       margin-bottom: 26px;
+
       .row__element{
         position: relative;
         text-align: center;
-        //margin-right: 13px;
-        //margin-left: 13px;
         transition: 0.5s;
         cursor: pointer;
+
         &:hover{
           transform: scale(1.2, 1.2);
           z-index: 2;
         }
+
         &:last-child{
           margin-right: 0;
         }
+
         &__text{
           position: absolute;
           bottom: 4px;
@@ -149,18 +159,21 @@ h3{
           right: 0;
           max-width: 283px;
           margin: 0 auto;
+
           p{
-            font-family: $fontOne;
             font-size: 18px;
             letter-spacing: 2px;
             line-height: 24px;
-            color: rgb(207,228,247);
+            color: $colorTwo;
             text-align: center;
             padding-bottom: 40px;
             padding-top: 22px;
           }
+
         }
+
       }
+
     }
 
   }
@@ -168,84 +181,139 @@ h3{
 }
 
 
-/*                                   third section                                   */
-.third-section{
- background: url("../img/Баннер2.png") no-repeat center;
+/*                                   third section      (color)                             */
+.third-section {
+  background: url("../img/Баннер2.png") no-repeat center;
   background-size: cover;
   height: 1241px;
-  &__content{
-  padding-top: 223px;
-    h3{
+
+  &__content {
+    padding-top: 223px;
+
+    h3 {
       color: white;
     }
-  }
-  .element__container{
-    display: flex;
-    justify-content: space-around;
-    max-width: 1028px;
-    margin: 96px auto 0;
-    border-top: 1px solid #e19a00;
-    .element__text {
-      text-align: left;
-      //background: rgba(9, 49, 81, 0.3);
-      max-width: 570px;
-      .text__header{
-        font-family: $fontOne;
-        padding: 48px 43px 0;
 
-        h4{
-          font-size: 24px;
-          letter-spacing: 1px;
-          color: rgb(255,255,255);
+    .third-section__slider {
+      position: relative;
+      max-width: 1028px;
+      margin: 96px auto 0;
+
+      &__element{
+        outline: none;
+        position: relative;
+
+        .element__container {
+          display: flex;
+          justify-content: space-around;
+          border-top: 2px solid $colorOne;
+
+          .element__text {
+            background: rgba(9, 49, 81, 0.9);
+            position: relative;
+            text-align: left;
+            max-width: 555px;
+            max-height: 417px;
+            margin-top: 78px;
+            padding: 0 34px 15px 52px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              z-index: 4;
+              bottom: -66px;
+              left: 174px;
+              height: 2px;
+              width: 522px;
+              background: $colorOne;
+            }
+
+            .text__header {
+              position: relative;
+              padding-top: 48px;
+              padding-right: 45px;
+              z-index: 2;
+
+              h4 {
+                font-size: 24px;
+                letter-spacing: 1px;
+                color: white;
+              }
+
+              p {
+                font-size: 16px;
+                letter-spacing: 1px;
+                line-height: 24px;
+                color: $colorOne;
+                padding-bottom: 27px;
+              }
+
+            }
+
+            .text__body {
+              position: relative;
+              height: 237px;
+              overflow: auto;
+              padding-right: 45px;
+              z-index: 2;
+              @include scroll;
+
+              p {
+                font-size: 16px;
+                letter-spacing: 1px;
+                line-height: 24px;
+                color: $colorTwo;
+
+              }
+
+            }
+
+          }
+
         }
-        p{
-          font-size: 16px;
-          letter-spacing: 1px;
-          line-height: 24px;
-          color: rgb(225,154,0);
-          padding-bottom: 27px;
-        }
+
       }
-      .text__body {
-        height: 241px;
-        overflow: auto;
-        padding: 0 43px 71px;
-        &::-webkit-scrollbar {
-          width: .5em;
-          height: 10px;
-        }
 
-        &::-webkit-scrollbar-button:start:decrement,
-        &::-webkit-scrollbar-button:end:increment {
-          height: 0;
-          width: 0;
-        }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 258px;
+        left: -257px;
+        height: 2px;
+        width: 516px;
+        background: $colorOne;
+        transform: rotate(90deg);
+      }
 
-        &::-webkit-scrollbar-track-piece {
-          border: 2px solid #e19a00;
-          -webkit-border-radius: 6px;
-        }
-
-        &::-webkit-scrollbar-thumb:vertical {
-          background-color: #e19a00;
-          -webkit-border-radius: 6px;
-        }
-        p {
-          font-size: 16px;
-          letter-spacing: 1px;
-          line-height: 24px;
-          color: rgb(207, 228, 247);
-          font-family: $fontOne;
-
-        }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 288px;
+        right: -288px;
+        height: 2px;
+        width: 577px;
+        background: $colorOne;
+        transform: rotate(90deg);
       }
 
     }
+
   }
+
+  .prev {
+    @include prevArrow;
+    bottom: 425px;
+  }
+
+  .next {
+    @include nextArrow;
+    bottom: 425px;
+  }
+
 }
 
 
-/*                                    fourth section                                 */
+/*                                    fourth section           (white)                      */
 
 .fourth-section{
 
@@ -280,22 +348,21 @@ h3{
           right: 0;
 
           h5{
-            font-family: $fontOne;
             font-size: 24px;
             letter-spacing: 2px;
             line-height: 30px;
-            color: rgb(255,255,255);
+            color: white;
             padding-bottom: 25px;
 
           }
 
           p{
-            font-family: $fontOne;
             font-size: 15px;
             letter-spacing: 2px;
             line-height: 18px;
-            color: rgb(207,228,247);
+            color: $colorTwo;
           }
+
         }
 
         &:hover{
@@ -311,28 +378,20 @@ h3{
 
 }
 
-/*                                     fifth section                                 */
+/*                                     fifth section        (color)                         */
 
 .fifth-section{
   background: url("../img/Баннер3.png") no-repeat center;
   background-size: cover;
   height: 1241px;
-  //position: relative;
-  img{
-    width: 100%;
-    display: block;
-  }
+
   &__content{
-    //position: absolute;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+
     h3{
       padding-top: 20%;
       color: white;
     }
+
     &__container{
       display: flex;
       padding-top: 87px;
@@ -344,14 +403,10 @@ h3{
         top: 127px;
         left: 28px;
         box-shadow: -1px 3px 55px 4px rgba(0,0,0,0.75);
-        img{
-          width: auto;
-
-        }
 
       }
       .content__text{
-        background: rgba(9, 49, 81, 0.6);
+        background: rgba(9, 49, 81, 0.7);
         padding-top: 41px;
         padding-bottom: 41px;
         padding-right:122px ;
@@ -362,43 +417,153 @@ h3{
           font-size: 18px;
           letter-spacing: 2px;
           line-height: 30px;
-          color: rgb(207,228,247);
-          font-family:$fontOne;
+          color: $colorTwo;
           padding-bottom: 10px;
           padding-top: 10px;
           transition: 0.5s;
           cursor: pointer;
+
           &:hover{
             transform: scale(1.2, 1.2);
-            //z-index: 2;
           }
+
           &:before{
             content: "";
             width: 126px;
             height: 2px;
             position: absolute;
-            background: #e19a00;
+            background: $colorOne;
             top: 25px;
             left: -144px;
-
-
-
           }
+
           &:last-child{
             padding-bottom: 0;
           }
+
           &:nth-child(even){
             padding-left: 61px;
+
             &:before{
               left: -93px;
             }
-          }
-        }
-      }
-    }
 
+          }
+
+        }
+
+      }
+
+    }
 
   }
 
+}
 
+/*                                                      sixth section     (white)                                            */
+
+.sixth-section{
+  height: 50px;
+}
+
+/*                                                      seventh section        (color)                                       */
+
+.seventh-section{
+  background: url("../img/Баннер4.png") no-repeat center;
+  background-size: cover;
+  height: 1371px;
+  text-align: center;
+
+    &__content{
+      padding-top: 208px;
+
+      &__text{
+        max-width: 355px;
+        margin: 0 auto;
+
+        h3{
+          color: white;
+          padding-bottom: 73px;
+        }
+
+        p{
+          font-size: 18px;
+          color: white;
+        }
+
+      }
+
+      .seventh-section__slider {
+        max-width: 1029px;
+        margin: 0 auto;
+        padding-top: 93px;
+
+        &__element {
+          outline: none;
+
+          .element__container {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            .element__text {
+              background: rgba(9, 49, 81, 0.9);
+              position: absolute;
+              max-width: 668px;
+              left: 0;
+              top: 39px;
+              padding: 23px 23px 15px;
+              text-align: left;
+
+              .text__header {
+
+                h4 {
+                  position: relative;
+                  font-size: 24px;
+                  color: rgb(255, 255, 255);
+                  padding-bottom: 6px;
+                  margin-bottom: 34px;
+                  border-bottom: 2px solid #e19a00;
+                  display: inline-block;
+                }
+                p {
+                  font-size: 14px;
+                  color: rgb(207, 228, 247);
+                  padding-bottom: 18px;
+                }
+              }
+              .text__body {
+
+                height: 310px;
+                overflow: auto;
+                @include scroll;
+                padding-right: 38px;
+                p {
+
+                  font-size: 14px;
+                  line-height: 18px;
+                  color: rgb(207, 228, 247);
+                  white-space: pre-line;
+
+                }
+              }
+            }
+
+          }
+
+        }
+      }
+
+    }
+  .prev {
+    @include prevArrow;
+    bottom: 245px;
+
+  }
+
+  .next {
+    @include nextArrow;
+    bottom: 245px;
+
+  }
 }
