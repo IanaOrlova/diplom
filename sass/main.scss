@@ -51,15 +51,18 @@ a{
   color: white;
   text-decoration: none;
 }
-.active{
-  border-bottom: 2px solid $colorOne ;
 
+.active {
+  border-bottom: 2px solid $colorOne;
 }
+
+
+
 
 
 /*                                  first section                              */
 
-.first-section{
+.first{
   background: url("../img/Баннер.png");
   height: 1031px;
 
@@ -89,6 +92,11 @@ a{
 
         a{
           padding-bottom: 8px;
+          transition: 0.5s;
+
+          &:hover{
+            color: $colorOne;
+          }
         }
 
       }
@@ -116,7 +124,7 @@ a{
 
   }
 
-  .first-section__logo{
+  .section__logo{
     padding-top: 192px;
     max-width: 574px;
     margin-left: 23%;
@@ -126,9 +134,11 @@ a{
 
 /*                           second section     (white)                                     */
 
-.second-section{
-
-  &__content{
+.second{
+  h3{
+    padding-top: 68px;
+  }
+  .content{
     padding-bottom: 195px;
     padding-top: 144px;
 
@@ -182,19 +192,19 @@ a{
 
 
 /*                                   third section      (color)                             */
-.third-section {
+.third {
   background: url("../img/Баннер2.png") no-repeat center;
   background-size: cover;
   height: 1241px;
 
-  &__content {
+  h3 {
+    color: white;
     padding-top: 223px;
+  }
 
-    h3 {
-      color: white;
-    }
+  .section__content {
 
-    .third-section__slider {
+    .section__slider {
       position: relative;
       max-width: 1028px;
       margin: 96px auto 0;
@@ -315,9 +325,11 @@ a{
 
 /*                                    fourth section           (white)                      */
 
-.fourth-section{
-
-  &__content{
+.fourth{
+  h3{
+    padding-top: 85px;
+  }
+  .section__content{
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
@@ -380,17 +392,19 @@ a{
 
 /*                                     fifth section        (color)                         */
 
-.fifth-section{
+.fifth{
   background: url("../img/Баннер3.png") no-repeat center;
   background-size: cover;
   height: 1241px;
 
-  &__content{
+  h3{
+    padding-top: 280px;
+    color: white;
+  }
 
-    h3{
-      padding-top: 20%;
-      color: white;
-    }
+  .section__content{
+
+
 
     &__container{
       display: flex;
@@ -462,19 +476,144 @@ a{
 
 /*                                                      sixth section     (white)                                            */
 
-.sixth-section{
-  height: 50px;
+.sixth{
+  .section__content{
+    padding-top: 72px;
+    padding-bottom: 42px;
+    display: flex;
+    justify-content: space-around;
+    .left{
+
+      .element__text__header{
+        position: relative;
+
+        p{
+          font-size: 48px;
+
+          span{
+            font-family: "Scriptorama",sans-serif;
+            font-size: 72px;
+            letter-spacing: 14px;
+          }
+
+        }
+        .header__img{
+          position: absolute;
+          top: 99px;
+          right: -10px;
+        }
+
+      }
+
+      .element__text__body{
+        padding-top: 128px;
+        position: relative;
+        padding-left: 18px;
+
+        p{
+          max-width: 280px;
+          font-size: 24px;
+          font-weight: bold;
+
+          &:last-child{
+            max-width: 315px;
+            font-size: 24px;
+            font-weight: normal;
+            padding-top: 44px;
+          }
+
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          transform: rotate(90deg);
+          height: 2px;
+          width: 186px;
+          background: #e19a00;
+          bottom: 88px;
+          left: -89px;
+        }
+
+      }
+
+    }
+    .right{
+      background: url("../img/big_contacts.png");
+      background-size: cover;
+      padding: 30px;
+      .element__text{
+        background: #f1f1f1;
+
+
+        h5{
+          font-size: 36px;
+          line-height: 30px;
+          text-align: center;
+          padding-bottom: 101px;
+          padding-top: 63px;
+          padding-left: 89px;
+          padding-right: 105px;
+        }
+       .element__link{
+         display: flex;
+         justify-content: space-between;
+         position: relative;
+         padding-left: 70px;
+         padding-right: 78px;
+         padding-bottom: 70px;
+         transition: 0.5s;
+         cursor: pointer;
+         &:hover{
+           transform: scale(1.1, 1.1);
+           i{
+             color: $colorOne;
+           }
+         }
+         a{
+           display: inline-block;
+         }
+         p{
+           font-size: 24px;
+           line-height: 30px;
+           color: rgb(65,65,65);
+           padding-top: 27px;
+         }
+         i{
+           font-size: 50px;
+           color: #0d2e4d;
+           cursor: pointer;
+           transition: 0.5s;
+           &:hover{
+             color: $colorOne;
+           }
+         }
+         &:after{
+           content: "";
+           position: absolute;
+           width: 280px;
+           height: 1px;
+           background: #414141;
+           bottom: 65px;
+           left: 64px;
+         }
+       }
+      }
+    }
+
+  }
+
 }
 
 /*                                                      seventh section        (color)                                       */
 
-.seventh-section{
+.seventh{
   background: url("../img/Баннер4.png") no-repeat center;
   background-size: cover;
   height: 1371px;
   text-align: center;
 
-    &__content{
+    .section__content{
       padding-top: 208px;
 
       &__text{
@@ -493,7 +632,7 @@ a{
 
       }
 
-      .seventh-section__slider {
+      .section__slider {
         max-width: 1029px;
         margin: 0 auto;
         padding-top: 93px;
@@ -505,6 +644,7 @@ a{
             position: relative;
             display: flex;
             justify-content: flex-end;
+            padding-bottom: 23px;
 
             .element__text {
               background: rgba(9, 49, 81, 0.9);
@@ -520,15 +660,15 @@ a{
                 h4 {
                   position: relative;
                   font-size: 24px;
-                  color: rgb(255, 255, 255);
+                  color: white;
                   padding-bottom: 6px;
                   margin-bottom: 34px;
-                  border-bottom: 2px solid #e19a00;
+                  border-bottom: 2px solid $colorOne;
                   display: inline-block;
                 }
                 p {
                   font-size: 14px;
-                  color: rgb(207, 228, 247);
+                  color: $colorTwo;
                   padding-bottom: 18px;
                 }
               }
@@ -542,7 +682,7 @@ a{
 
                   font-size: 14px;
                   line-height: 18px;
-                  color: rgb(207, 228, 247);
+                  color: $colorTwo;
                   white-space: pre-line;
 
                 }
@@ -558,12 +698,98 @@ a{
   .prev {
     @include prevArrow;
     bottom: 245px;
-
   }
 
   .next {
     @include nextArrow;
     bottom: 245px;
+  }
+  .slick-dots{
+    @include dots;
 
+  }
+}
+
+/*                                                 eight section                                                 */
+
+.eight{
+  h3{
+    padding-top: 85px;
+  }
+  .section__content{
+    padding-top: 135px;
+
+    .section__slider {
+      max-width: 1033px;
+      margin: 0 auto;
+      &__element {
+        outline: none;
+
+        .element__container {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 10px;
+          padding-bottom: 53px;
+          .element__text {
+            max-width: 750px;
+            position: relative;
+
+            .text__img {
+              padding-bottom: 35px;
+            }
+
+            .text__body {
+
+              a{
+                color: #0092ef;
+              }
+
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              height: 2px;
+              width: 181px;
+              background: $colorOne;
+              transform: rotate(90deg);
+              left: -117px;
+              top: 83px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .prev {
+    @include prevArrow;
+    bottom: 145px;
+  }
+
+  .next {
+    @include nextArrow;
+    bottom: 145px;
+  }
+
+  .slick-dots{
+    @include dots;
+  }
+
+}
+
+/*                                                       ninth section                                              */
+
+.ninth{
+  background: url("../img/Баннер5.png") no-repeat center;
+  background-size: cover;
+  height: 1371px;
+  h3{
+    padding-top: 235px;
+    color: white;
   }
 }
