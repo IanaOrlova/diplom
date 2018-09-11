@@ -26,11 +26,11 @@
 
 
 
-     // $("a[rel = 'colorbox']").colorbox({
-     //     maxWidth:"100%",
-     //     maxHeight:"100%",
-     //     opacity:"0.1",
-     // });
+     $("a[rel = 'colorbox']").colorbox({
+         maxWidth:"100%",
+         maxHeight:"100%",
+         // opacity:"0.1",
+     });
 
      $('.third .section__slider').slick({
          infinite: true,
