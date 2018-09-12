@@ -60,14 +60,45 @@
          dots: true,
 
      });
-     // var bloc = document.querySelector('.green');
-     //
-     // window.onscroll = function () {
-     //     if(scrollY>=1600){
-     //         bloc.style.color = "white"
-     //     }else {bloc.style.color = "black"}
-     //
-     // }
+
+     //всплывающее меню          //
+     var bloc = document.querySelector('.display_none');
+
+     window.onscroll = function () {
+         if(scrollY>=1031){
+             bloc.style.display = "flex"
+         }else {bloc.style.display = "none"}
+
+     };
+
+
+     var mapContainer = document.getElementById('map');
+
+     showMap(document.getElementById('map'),  47.844830,  35.136227 );
+
+     function showMap(mapContaine, lat, lon) {
+         var center = new google.maps.LatLng(lat, lon);
+
+         var marker = new google.maps.Marker({
+             position: {lat:  47.846449, lng: 35.139038},
+             icon: {
+                 url: "script/placeholder.png",
+                 scaledSize: new google.maps.Size(47, 66)
+             }
+         });
+
+         var mapProp= {
+             center: center,
+             zoom: 17,
+             zoomControl:false,
+             disableDefaultUI: true,
+             //
+         };
+
+         var map = new google.maps.Map(mapContainer, mapProp);
+         marker.setMap(map);
+
+     }
 
 
  });

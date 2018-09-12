@@ -80,71 +80,54 @@ a{
 /*                                  first section                              */
 
 .first{
-  background: url("../img/Баннер.png");
+  background: url("../img/Баннер.png") no-repeat center;
   height: 1031px;
 
-  header{
+  .display_flex{
     display: flex;
     justify-content: space-around;
     padding-top: 16px;
     padding-bottom: 10px;
     width: 1077px;
     margin: 0 auto;
-    background: #0d2e4d;
-    border-bottom-left-radius: 63px;
-    border-bottom-right-radius: 63px;
+    position: relative;
+    z-index: 1;
+    @include header_menu;
+
+  }
+
+  .display_none {
+    display: none;
+    padding-top: 16px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    background: url("../img/fixed_menu.png");
+    background-size: cover;
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translate(-50%);
+    left: 0;
+    right: 0;
     z-index: 3;
 
-    .nav__menu{
-      padding-top: 5px;
-
-      li{
-        font-size: 18px;
-        color:white;
-        margin: 0 10px;
-
-        a{
-          padding-bottom: 8px;
-          transition: 0.5s;
-
-          &:hover{
-            color: $colorOne;
-          }
-        }
-
-      }
-
-    }
-    .nav__links{
-      padding-top: 5px;
-
-      li{
-        margin: 0 16px;
-
-        a{
-          color: white;
-          transition: 0.5s;
-
-          &:hover{
-            color: $colorOne;
-          }
-
-        }
-
-      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        @include header_menu;
 
     }
 
   }
 
-  .section__logo{
-    padding-top: 192px;
-    max-width: 574px;
-    margin-left: 23%;
+  .section__banner_img{
+    display: flex;
+    justify-content: space-around;
+    margin: -72px auto 0;
+
+    .element_left{
+      padding-top: 233px;
+    }
+
   }
 
 }
@@ -152,12 +135,30 @@ a{
 /*                           second section     (white)                                     */
 
 .second{
+  position: relative;
+  .element_absolute{
+
+  }
+
   h3{
     padding-top: 68px;
+    position: relative;
+    z-index: 2;
   }
   .content{
     padding-bottom: 195px;
     padding-top: 144px;
+    position: relative;
+    .one{
+      position: absolute;
+      bottom: -91px;
+      left: -45px;
+    }
+    .two{
+      position: absolute;
+      top: -224px;
+      right: -60px;
+    }
 
     .content__row{
       display: flex;
@@ -347,11 +348,22 @@ a{
     padding-top: 85px;
   }
   .section__content{
+    position: relative;
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
     padding-top: 135px;
     padding-bottom: 64px;
+    .one{
+      position: absolute;
+      top: -187px;
+      left: 0;
+    }
+    .two{
+      position: absolute;
+      bottom: -188px;
+      right: -114px
+    }
 
     .content__element{
 
@@ -397,6 +409,9 @@ a{
         &:hover{
           transform: scale(1.1, 1.1);
           z-index: 2;
+          h5{
+            color: $colorOne;
+          }
         }
 
       }
@@ -495,10 +510,24 @@ a{
 
 .sixth{
   .section__content{
+    position: relative;
     padding-top: 72px;
     padding-bottom: 42px;
     display: flex;
     justify-content: space-around;
+
+    .one{
+      position: absolute;
+      top: -205px;
+      left: 63px;
+    }
+
+    .two{
+      position: absolute;
+      bottom: -164px;
+      right: 90px;
+    }
+
     .left{
 
       .element__text__header{
@@ -559,9 +588,9 @@ a{
       background: url("../img/big_contacts.png");
       background-size: cover;
       padding: 30px;
+
       .element__text{
         background: #f1f1f1;
-
 
         h5{
           font-size: 36px;
@@ -572,7 +601,8 @@ a{
           padding-left: 89px;
           padding-right: 105px;
         }
-       .element__link{
+
+        .element__link{
          display: flex;
          justify-content: space-between;
          position: relative;
@@ -581,30 +611,31 @@ a{
          padding-bottom: 70px;
          transition: 0.5s;
          cursor: pointer;
+
          &:hover{
            transform: scale(1.1, 1.1);
-           i{
-             color: $colorOne;
+
+           svg{
+             @include svg;
            }
+
          }
+
          a{
            display: inline-block;
+           svg path{
+             fill:#052F6A;
+             stroke:#052F6A;
+           }
          }
+
          p{
            font-size: 24px;
            line-height: 30px;
            color: rgb(65,65,65);
            padding-top: 27px;
          }
-         i{
-           font-size: 50px;
-           color: #0d2e4d;
-           cursor: pointer;
-           transition: 0.5s;
-           &:hover{
-             color: $colorOne;
-           }
-         }
+
          &:after{
            content: "";
            position: absolute;
@@ -614,8 +645,11 @@ a{
            bottom: 65px;
            left: 64px;
          }
+
        }
+
       }
+
     }
 
   }
@@ -683,35 +717,41 @@ a{
                   border-bottom: 2px solid $colorOne;
                   display: inline-block;
                 }
+
                 p {
                   font-size: 14px;
                   color: $colorTwo;
                   padding-bottom: 18px;
                 }
-              }
-              .text__body {
 
+              }
+
+              .text__body {
                 height: 310px;
                 overflow: auto;
                 @include scroll;
                 padding-right: 38px;
-                p {
 
+                p {
                   font-size: 14px;
                   line-height: 18px;
                   color: $colorTwo;
                   white-space: pre-line;
-
                 }
+
               }
+
+
             }
 
           }
 
         }
+
       }
 
     }
+
   .prev {
     @include prevArrow;
     bottom: 245px;
@@ -721,24 +761,40 @@ a{
     @include nextArrow;
     bottom: 245px;
   }
+
   .slick-dots{
     @include dots;
-
   }
+
 }
 
-/*                                                 eight section                                                 */
+/*                                                 eight section   (white)                                              */
 
 .eight{
+
   h3{
     padding-top: 85px;
   }
   .section__content{
     padding-top: 135px;
+    position: relative;
+
+    .one{
+      position: absolute;
+      top: -205px;
+      left: -13px;
+    }
+
+    .two{
+      position: absolute;
+      bottom: -164px;
+      right: 90px;
+    }
 
     .section__slider {
       max-width: 1033px;
       margin: 0 auto;
+
       &__element {
         outline: none;
 
@@ -900,3 +956,209 @@ a{
   }
 
 }
+
+/*                                            tenth section          (white map)                                  */
+
+.tenth{
+
+  h3{
+    padding-top: 90px;
+    padding-bottom: 118px;
+  }
+
+  .section__content{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 85px;
+    position: relative;
+
+    .one{
+      position: absolute;
+      top: -337px;
+      left: 31px;
+    }
+
+    #map{
+      width: 700px;
+      height: 618px;
+    }
+
+    .right_top{
+      position: relative;
+
+      P{
+        font-size: 18px;
+        color: rgb(69,68,68);
+
+        &:first-child{
+          font-size: 24px;
+          color: black;
+          padding-bottom: 20px;
+        }
+
+        &:nth-child(3){
+          padding-bottom: 7px;
+        }
+
+        &:nth-child(4){
+          padding-bottom: 20px;
+        }
+
+        &:nth-child(5){
+          font-size: 24px;
+          letter-spacing: 1px;
+          line-height: 24px;
+          max-width: 239px;
+          color: black;
+          padding-bottom: 37px;
+        }
+
+      }
+
+      &__img{
+        position: absolute;
+        right: 72px;
+        bottom: 34px;
+      }
+
+    }
+
+    .right_bottom {
+      background: url("../img/little_contacts.png");
+      background-size: cover;
+      padding: 17px;
+
+      .element__text {
+        background: #f1f1f1;
+
+        h5 {
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+          padding-bottom:36px;
+          padding-top: 44px;
+          padding-left: 93px;
+          padding-right: 91px;
+        }
+
+        .element__link {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          padding-left: 37px;
+          padding-right: 39px;
+          padding-bottom: 36px;
+          transition: 0.5s;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1, 1.1);
+
+            svg{
+              @include svg;
+            }
+
+          }
+
+          a {
+            display: inline-block;
+
+            svg path{
+              fill:#052F6A;
+              stroke:#052F6A;
+            }
+
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 30px;
+            color: rgb(65, 65, 65);
+            padding-top: 19px;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 268px;
+            height: 1px;
+            background: #414141;
+            bottom: 35px;
+            left: 33px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/*                                                      footer                                                       */
+
+footer{
+  background: #022b49;
+  .element__container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: space-around;
+    li {
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 14px;
+      transition: 0.5s;
+      &:hover {
+        cursor: pointer;
+        svg {
+          @include svg;
+        }
+      }
+
+    }
+    .footer__element {
+      position: relative;
+
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+        padding-left: 20px;
+        transition: 0.5s;
+
+        &:last-child {
+          font-size: 16px;
+        }
+
+      }
+      .element__img {
+        position: absolute;
+        left: -5px;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        svg {
+          @include svg;
+        }
+
+        p {
+          color: $colorOne;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
