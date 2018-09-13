@@ -32,7 +32,16 @@
          // opacity:"0.1",
      });
 
-     $('.third .section__slider').slick({
+     $('.third .hidden').slick({
+         infinite: true,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         prevArrow:'<img class="prev" src="img/left.png">',
+         nextArrow:'<img class="next" src="img/right.png">',
+
+     });
+
+     $('.third .visible').slick({
          infinite: true,
          slidesToShow: 1,
          slidesToScroll: 1,
