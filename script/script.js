@@ -47,6 +47,7 @@
          slidesToScroll: 1,
          prevArrow:'<img class="prev" src="img/left.png">',
          nextArrow:'<img class="next" src="img/right.png">',
+         dots: true,
 
      });
 

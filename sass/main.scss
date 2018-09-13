@@ -126,6 +126,10 @@ a{
 
     .element_left{
       padding-top: 233px;
+      img{
+        display: block;
+
+      }
     }
 
   }
@@ -349,6 +353,7 @@ a{
        .section__slider__element{
         outline: none;
         position: relative;
+         padding-bottom: 30px;
 
         .element__container {
           background: rgba(9, 49, 81, 0.9);
@@ -421,6 +426,10 @@ a{
        .next {
          @include nextArrow;
          bottom: 255px;
+       }
+
+       .slick-dots{
+         @include dots;
        }
 
     }
@@ -1260,7 +1269,8 @@ footer{
 @media all and  (max-width: 1199px) {
 
 
-  .first{
+  .first {
+
 
     .section__content {
 
@@ -1269,6 +1279,24 @@ footer{
       }
       .display_flex{
         width: auto;
+      }
+
+      .section__banner_img{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        .element_left{
+          padding-top: 180px;
+          img{
+            margin: 0 auto;
+
+          }
+
+        }
+        .element-right{
+          display: none;
+        }
       }
 
     }
@@ -1306,6 +1334,9 @@ footer{
           margin-bottom: 16px;
           margin-right: 8px;
           margin-left: 8px;
+          &:last-child{
+            margin-right: 8px;
+          }
         }
 
       }
@@ -1374,7 +1405,7 @@ footer{
       &__container{
         display: block;
         padding-top: 57px;
-        max-width: 630px;
+        max-width: 700px;
         margin: 0 auto;
         position: relative;
 
@@ -1387,44 +1418,7 @@ footer{
           padding-top: 41px;
           padding-bottom: 41px;
           padding-right:0 ;
-          padding-left: 159px;
-
-          p{
-            position: relative;
-            font-size: 18px;
-            letter-spacing: 2px;
-            line-height: 30px;
-            color: $colorTwo;
-            padding-bottom: 10px;
-            padding-top: 10px;
-            transition: 0.5s;
-            cursor: pointer;
-
-
-            &:before{
-              content: "";
-              width: 126px;
-              height: 2px;
-              position: absolute;
-              background: $colorOne;
-              top: 25px;
-              left: -144px;
-            }
-
-            &:last-child{
-              padding-bottom: 0;
-            }
-
-            &:nth-child(even){
-              padding-left: 61px;
-
-              &:before{
-                left: -93px;
-              }
-
-            }
-
-          }
+          padding-left: 212px;
 
         }
 
@@ -1435,22 +1429,13 @@ footer{
   }
 
 
-
-
-
-
-
-
-
-
-
   .seventh{
 
     .section__content{
       padding-top: 208px;
 
       .section__slider {
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto;
 
         &__element {
@@ -1509,7 +1494,7 @@ footer{
       }
 
       .section__slider {
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto;
 
         &__element {
@@ -1578,7 +1563,7 @@ footer{
         width: auto;
         height: 618px;
       }
-/*              */
+
       .right{
         display: flex;
         justify-content: space-around;
@@ -1596,68 +1581,98 @@ footer{
 
       }
 
-      .right_bottom {
-        background: url("../img/little_contacts.png");
-        background-size: cover;
-        padding: 17px;
+    }
 
-        .element__text {
-          background: #f1f1f1;
+  }
 
-          h5 {
-            font-size: 24px;
-            line-height: 30px;
-            text-align: center;
-            padding-bottom:36px;
-            padding-top: 44px;
-            padding-left: 93px;
-            padding-right: 91px;
-          }
+}
 
-          .element__link {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            padding-left: 37px;
-            padding-right: 39px;
-            padding-bottom: 36px;
-            transition: 0.5s;
-            cursor: pointer;
+@media all and  (max-width: 1100px) {
 
-            &:hover {
-              transform: scale(1.1, 1.1);
+  .sixth{
+    display: none;
+  }
 
-              svg{
-                @include svg;
+  .ninth{
+    display: none;
+  }
+
+  .tenth{
+    padding-top: 180px;
+  }
+
+
+}
+
+@media all and  (max-width: 800px) {
+
+  h3{
+    font-size: 54px;
+  }
+
+  .third {
+
+    .section__content {
+
+
+      .visible {
+
+        .prev {
+          @include prevArrow;
+         display: none !important;
+        }
+
+        .next {
+          @include nextArrow;
+         display: none !important;
+        }
+
+      }
+
+    }
+
+  }
+
+  .fifth{
+
+    .section__content{
+
+      &__container{
+        display: block;
+        padding-top: 57px;
+        max-width: 700px;
+        margin: 0 auto;
+        position: relative;
+
+        .content__img{
+          display: none;
+
+        }
+        .content__text{
+          padding-left: 80px;
+
+          p{
+
+            &:hover{
+              transform: none;
+            }
+
+            &:before{
+              width: 49px;
+              left: -62px;
+            }
+
+            &:last-child{
+              padding-bottom: 0;
+            }
+
+            &:nth-child(even){
+              padding-left: 0;
+
+              &:before{
+                left: -62px;
               }
 
-            }
-
-            a {
-              display: inline-block;
-
-              svg path{
-                fill:#052F6A;
-                stroke:#052F6A;
-              }
-
-            }
-
-            p {
-              font-size: 18px;
-              line-height: 30px;
-              color: rgb(65, 65, 65);
-              padding-top: 19px;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 268px;
-              height: 1px;
-              background: #414141;
-              bottom: 35px;
-              left: 33px;
             }
 
           }
@@ -1670,13 +1685,197 @@ footer{
 
   }
 
+  .seventh {
+
+    .section__content {
+
+        .prev {
+          @include prevArrow;
+          display: none !important;
+        }
+
+        .next {
+          @include nextArrow;
+          display: none !important;
+        }
 
 
 
+    }
+
+  }
+
+  .eight {
+
+    .section__content {
+
+      .prev {
+        @include prevArrow;
+        display: none !important;
+      }
+
+      .next {
+        @include nextArrow;
+        display: none !important;
+      }
 
 
 
+    }
+
+  }
+
+  .tenth{
+    text-align: center;
+    .section__content {
+
+      .right {
+        display: block;
+        padding-bottom: 50px;
+      }
+
+      .right_top {
+        position: relative;
+
+        p {
+
+          &:nth-child(5) {
+            margin: 0 auto;
+          }
+
+        }
+
+        &__img {
+          position: absolute;
+          right: 213px;
+          bottom: 0;
+          top: 118px;
+        }
+
+      }
+      .right_bottom{
+        max-width: 320px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+
+    }
+
+  }
 
 
 }
 
+@media all and  (max-width: 600px) {
+  h3{
+    font-size: 32px;
+  }
+
+  .first {
+
+    .section__content {
+
+
+      .section__banner_img {
+
+        .element_left {
+
+          img {
+           display: block;
+            width: 100%;
+
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media all and  (max-width: 400px) {
+
+
+
+  .fourth {
+
+    .section__content {
+
+
+      .content__element {
+
+        .element__img {
+          top: 0;
+          img{
+            width: 100%;
+            display: block;
+          }
+        }
+        .element__background{
+          padding-bottom: 20px;
+          img{
+            width: 100%;
+            display: block;
+          }
+          &:hover{
+            transform: none;
+          }
+          .element__text{
+            top: 11px;
+            p{
+              padding-left: 8px;
+              padding-right: 8px;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .second {
+    position: relative;
+    .element_absolute {
+
+    }
+
+
+    .content {
+
+
+
+      .content__row {
+
+
+        .row__element {
+
+          .row__element__background{
+            width: 100%;
+            display: block;
+          }
+          .row__element__text{
+            img{
+              display: block;
+              max-width: 112px;
+              max-height: 112px;
+              margin: 0 auto;
+            }
+          }
+
+          &:hover {
+            transform: none;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+
+footer{
+  .element__container{
+    display: block;
+  }
+}
+
+}
