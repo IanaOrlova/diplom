@@ -1613,7 +1613,10 @@ footer{
     height: 770px;
   }
 
+
   .third {
+
+
 
     .section__content {
 
@@ -1689,22 +1692,22 @@ footer{
   }
 
   .seventh {
+    height: 1250px;
+      .section__content {
 
-    .section__content {
+          .prev {
+            @include prevArrow;
+            display: none !important;
+          }
 
-        .prev {
-          @include prevArrow;
-          display: none !important;
-        }
-
-        .next {
-          @include nextArrow;
-          display: none !important;
-        }
+          .next {
+            @include nextArrow;
+            display: none !important;
+          }
 
 
 
-    }
+      }
 
   }
 

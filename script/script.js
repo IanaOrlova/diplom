@@ -84,7 +84,7 @@
 
      var mapContainer = document.getElementById('map');
 
-     showMap(document.getElementById('map'),  47.844830,  35.136227 );
+     showMap(document.getElementById('map'),  47.846449,   35.139038 );
 
      function showMap(mapContaine, lat, lon) {
          var center = new google.maps.LatLng(lat, lon);
