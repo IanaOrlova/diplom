@@ -154,10 +154,12 @@ a{
 
     .nav__menu.menu_state_open .menu__icon span:nth-child(2) {
       transform: rotate(45deg);
+      background: #e19a00;
     }
 
     .nav__menu.menu_state_open  .menu__icon span:nth-child(3) {
       transform: rotate(-45deg);
+      background: #e19a00;
     }
 
     .nav__menu.menu_state_open  .menu__icon span:nth-child(4) {
