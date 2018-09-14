@@ -26,11 +26,11 @@
      //                            меню
 
 
-     $('.menu__button').click(function (e) {
-         var target = e.target;
-         var menuId = $(target).data('menu-id');
-         $(menuId).toggle();
-     });
+     // $('.menu__button').click(function (e) {
+     //     var target = e.target;
+     //     var menuId = $(target).data('menu-id');
+     //     $(menuId).toggle();
+     // });
 
 
 
@@ -117,6 +117,56 @@
          marker.setMap(map);
 
      }
+
+
+         $(function() {
+             $('.menu__icon').on('click', function() {
+                 $(this).closest('.nav__menu')
+                     .toggleClass('menu_state_open');
+             });
+
+             $('.menu__links-item').on('click', function() {
+                 // do something
+
+                 $(this).closest('.nav__menu')
+                     .removeClass('menu_state_open');
+             });
+         });
+
+
+
+     // var Menu = {
+     //
+     //     el: {
+     //         ham: $('.menu'),
+     //         menuTop: $('.menu-top'),
+     //         menuMiddle: $('.menu-middle'),
+     //         menuBottom: $('.menu-bottom')
+     //     },
+     //
+     //     init: function() {
+     //         Menu.bindUIactions();
+     //     },
+     //
+     //     bindUIactions: function() {
+     //         Menu.el.ham
+     //             .on(
+     //                 'click',
+     //                 function(event) {
+     //                     Menu.activateMenu(event);
+     //                     event.preventDefault();
+     //                 }
+     //             );
+     //     },
+     //
+     //     activateMenu: function() {
+     //         Menu.el.menuTop.toggleClass('menu-top-click');
+     //         Menu.el.menuMiddle.toggleClass('menu-middle-click');
+     //         Menu.el.menuBottom.toggleClass('menu-bottom-click');
+     //     }
+     // };
+     //
+     // Menu.init();
 
 
  });
