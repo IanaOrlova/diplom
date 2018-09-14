@@ -658,7 +658,7 @@ a{
         background: rgba(9, 49, 81, 0.7);
         padding-top: 41px;
         padding-bottom: 41px;
-        padding-right:122px ;
+        padding-right:87px ;
         padding-left: 217px;
 
         p{
@@ -1182,7 +1182,7 @@ a{
 
     #map{
       width: 700px;
-      height: 618px;
+      height: 616px;
     }
 
     .right_top{
@@ -1195,7 +1195,7 @@ a{
         &:first-child{
           font-size: 24px;
           color: black;
-          padding-bottom: 20px;
+          margin-bottom: 20px;
         }
 
         &:nth-child(3){
@@ -1217,12 +1217,12 @@ a{
           letter-spacing: 1px;
           line-height: 24px;
           color: black;
-          padding-bottom: 37px;
+          margin-bottom: 30px;
         }
         .top__img{
           position: absolute;
           right: -50px;
-          bottom: 34px;
+          bottom: 0;
         }
 
       }
@@ -1237,14 +1237,14 @@ a{
 
       .element__text {
         background: #f1f1f1;
-        padding-bottom: 36px;
+        padding-bottom: 30px;
 
         h5 {
           font-size: 24px;
           line-height: 30px;
           text-align: center;
-          padding-bottom:36px;
-          padding-top: 44px;
+          padding-bottom:33px;
+          padding-top: 33px;
           padding-left: 93px;
           padding-right: 91px;
         }
@@ -1255,7 +1255,7 @@ a{
           position: relative;
           margin-left: 37px;
           margin-right: 39px;
-          margin-bottom: 36px;
+          margin-bottom: 31px;
           transition: 0.5s;
           cursor: pointer;
           border-bottom: 1px solid black;
@@ -1545,7 +1545,7 @@ footer{
           padding-top: 41px;
           padding-bottom: 41px;
           padding-right:0 ;
-          padding-left: 212px;
+          padding-left: 228px;
 
         }
 
@@ -1699,6 +1699,7 @@ footer{
       }
       .right_top{
         position: relative;
+
 
         &__img{
           position: absolute;
@@ -1961,7 +1962,7 @@ ul {
   }
 
   .tenth{
-    text-align: center;
+    //text-align: center;
     .section__content {
 
       .right {
@@ -1970,7 +1971,12 @@ ul {
       }
 
       .right_top {
+        margin: 0 auto;
+        text-align: left;
         position: relative;
+        max-width: 300px;
+        border-left: 2px solid $colorOne;
+        padding-left: 18px;
 
         p {
 
@@ -1983,9 +1989,11 @@ ul {
 
         .container-text__img {
           margin: 0 auto;
+          max-width: none;
+
 
           .top__img {
-            right: -32px;
+            right: 6px;
           }
         }
 
@@ -2153,7 +2161,7 @@ h3{
 
           .element__text{
             max-width: 300px;
-             top: 27px;
+            top: 27px;
             bottom: 15px;
             padding-right: 8px;
             padding-left: 8px;
