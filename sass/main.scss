@@ -692,6 +692,7 @@ a{
 
       .element__text{
         background: #f1f1f1;
+        padding-bottom: 70px;
 
         h5{
           font-size: 36px;
@@ -707,11 +708,12 @@ a{
          display: flex;
          justify-content: space-between;
          position: relative;
-         padding-left: 70px;
-         padding-right: 78px;
-         padding-bottom: 70px;
+         margin-left: 70px;
+         margin-right: 78px;
+         margin-bottom: 70px;
          transition: 0.5s;
          cursor: pointer;
+         border-bottom: 1px solid black;
 
          &:hover{
            transform: scale(1.1, 1.1);
@@ -736,17 +738,7 @@ a{
            color: rgb(65,65,65);
            padding-top: 27px;
          }
-
-         &:after{
-           content: "";
-           position: absolute;
-           width: 280px;
-           height: 1px;
-           background: #414141;
-           bottom: 65px;
-           left: 64px;
-         }
-
+          
        }
 
       }
@@ -906,6 +898,7 @@ a{
           justify-content: space-between;
           padding-top: 10px;
           padding-bottom: 53px;
+
           .element__text {
             max-width: 750px;
             position: relative;
@@ -1278,6 +1271,7 @@ footer{
        .display_none {
         display: none !important;
       }
+
       .display_flex{
         width: auto;
       }
@@ -1289,15 +1283,17 @@ footer{
 
         .element_left{
           padding-top: 180px;
+
           img{
             margin: 0 auto;
-
           }
 
         }
+
         .element-right{
           display: none;
         }
+
       }
 
     }
@@ -1305,6 +1301,7 @@ footer{
   }
 
   .second {
+    margin-top: -20px;
 
     h3{
       padding-top: 0;
@@ -1348,6 +1345,7 @@ footer{
 
 
   .third {
+    margin-top: -50px;
 
     .section__content {
 
@@ -1365,6 +1363,8 @@ footer{
 
 
   .fourth {
+    margin-top: -70px;
+
     h3{
       padding-top: 0;
     }
@@ -1400,6 +1400,7 @@ footer{
 
 
   .fifth{
+    margin-top: -80px;
 
     .section__content{
 
@@ -1478,6 +1479,7 @@ footer{
 
 
   .eight{
+    margin-top: -60px;
 
     h3{
       padding-top: 0;
@@ -1610,9 +1612,24 @@ footer{
   h3{
     font-size: 54px;
   }
+
   .first{
     height: 770px;
+
+    .section__content{
+
+      .section__banner_img {
+
+        .element_left {
+          padding-top: 50px;
+        }
+
+      }
+
+    }
+
   }
+
 
 
   .third {
@@ -1776,9 +1793,27 @@ footer{
 }
 
 @media all and  (max-width: 600px) {
+
   h3{
     font-size: 32px;
   }
+
+  .first{
+
+    .section__content{
+
+      .section__banner_img {
+
+        .element_left {
+          padding-top: 80px;
+        }
+
+      }
+
+    }
+
+  }
+
 
   .first {
 
@@ -1807,6 +1842,22 @@ footer{
 h3{
   letter-spacing: 9px;
 }
+
+  .first{
+
+    .section__content{
+
+      .section__banner_img {
+
+        .element_left {
+          padding-top: 100px;
+        }
+
+      }
+
+    }
+
+  }
 
   .fourth {
 
