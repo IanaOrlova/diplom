@@ -1631,6 +1631,18 @@ footer{
         .header__logo{
           display: none;
         }
+        .nav__menu{
+
+          ul{
+            
+            li{
+              &:nth-child(6){
+                display: none;
+              }
+
+            }
+          }
+        }
       }
 
     }
@@ -1677,8 +1689,8 @@ footer{
       .display_flex {
         flex-direction: row-reverse;
         justify-content: space-between;
-        padding-right: 50px;
-        padding-left: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
 
         .nav__links{
           padding-top: 15px;
@@ -1694,9 +1706,9 @@ footer{
             top: 83px;
             right: 0;
             text-align: right;
-            width: 30%;
+            width: 200px;
             padding: 0;
-            padding-right: 50px;
+            padding-right: 30px;
             background: rgba(9, 49, 81, 0.7);
           }
 
