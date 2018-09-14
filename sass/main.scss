@@ -1705,17 +1705,19 @@ footer{
             z-index: 2;
             top: 83px;
             right: 0;
-            text-align: right;
-            width: 200px;
+            text-align: center;
+            width: 100%;
             padding: 0;
-            padding-right: 30px;
-            background: rgba(9, 49, 81, 0.7);
+
+            background: rgba(9, 49, 81, 0.9);
           }
 
           #top-menu li {
             display: block;
-            margin: 30px 0;
-            padding: 0;
+            padding: 28px 0;
+            font-size: 24px;
+            border-bottom:1px solid #0c5075 ;
+            color: $colorTwo;
 
               &:nth-child(6){
                 display: none;
@@ -1966,20 +1968,29 @@ footer{
 
   footer{
     .element__container{
+      padding: 10px 0;
       display: block;
-      padding-left: 30px;
-      padding-right: 30px;
-      text-align: right;
       max-width: 160px;
-      margin-right: 0;
-
       .footer__element{
-        padding-bottom: 30px;
+        padding-bottom: 10px;
+        padding-top: 10px;
 
         .element__img{
-
+          left: 8px;
         }
-        p{
+
+        &:nth-child(2){
+          p{
+            margin-left: 10px;
+          }
+
+            .element__img {
+              left: -7px;
+            }
+          
+        }
+          p{
+          margin-left: 20px;
           &:first-child{
             display: none;
           }
@@ -1987,6 +1998,12 @@ footer{
         }
 
       }
+      ul{
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+
 
     }
   }
