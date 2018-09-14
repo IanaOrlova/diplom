@@ -23,13 +23,21 @@
          });
      });
 
+     //                            меню
+
+
+     $('.menu__button').click(function (e) {
+         var target = e.target;
+         var menuId = $(target).data('menu-id');
+         $(menuId).toggle();
+     });
 
 
 
      $("a[rel = 'colorbox']").colorbox({
          maxWidth:"100%",
          maxHeight:"100%",
-         // opacity:"0.1",
+
      });
 
      $('.third .hidden').slick({
