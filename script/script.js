@@ -1,6 +1,8 @@
 
  $(document).ready(function () {
 
+        //                функция скрола
+
 
      $(document).on("scroll", onScroll);
 
@@ -23,15 +25,10 @@
          });
      });
 
-     //                            меню
+     //===================================//
 
 
-     // $('.menu__button').click(function (e) {
-     //     var target = e.target;
-     //     var menuId = $(target).data('menu-id');
-     //     $(menuId).toggle();
-     // });
-
+     //                галерея
 
 
      $("a[rel = 'colorbox']").colorbox({
@@ -40,8 +37,13 @@
 
      });
 
+     //=================================//
+
+
+     //              слайдер
+
      $('.third .hidden').slick({
-         infinite: true,
+         infinite: false,
          slidesToShow: 1,
          slidesToScroll: 1,
          prevArrow:'<img class="prev" src="img/left.png">',
@@ -50,7 +52,7 @@
      });
 
      $('.third .visible').slick({
-         infinite: true,
+         infinite: false,
          slidesToShow: 1,
          slidesToScroll: 1,
          prevArrow:'<img class="prev" src="img/left.png">',
@@ -59,8 +61,42 @@
 
      });
 
+     $('.fourth-section-visible').slick({
+         infinite: false,
+         slidesToShow: 2,
+         slidesToScroll: 1,
+         prevArrow:'<img class="prev" src="img/left.png">',
+         nextArrow:'<img class="next" src="img/right.png">',
+         dots: true,
+         responsive: [
+             {
+                 breakpoint: 901,
+                 settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+
+
+                 }
+             },
+             // {
+             //     breakpoint: 570,
+             //     settings: {
+             //         slidesToShow: 1,
+             //         slidesToScroll: 1,
+             //         arrows:false,
+             //
+             //     }
+             // },
+
+
+
+             ]
+
+     });
+
+
      $('.seventh .section__slider').slick({
-         infinite: true,
+         infinite: false,
          slidesToShow: 1,
          slidesToScroll: 1,
          prevArrow:'<img class="prev" src="img/left.png">',
@@ -70,7 +106,7 @@
      });
 
      $('.eight .section__slider').slick({
-         infinite: true,
+         infinite: false,
          slidesToShow: 1,
          slidesToScroll: 1,
          prevArrow:'<img class="prev" src="img/left.png">',
@@ -79,7 +115,12 @@
 
      });
 
-     //всплывающее меню          //
+
+     //======================================//
+
+        //          всплывающее меню
+
+
      var bloc = document.querySelector('.display_none');
 
      window.onscroll = function () {
@@ -89,6 +130,14 @@
 
      };
 
+
+           //================================//
+
+
+
+
+
+     //                   карта
 
      var mapContainer = document.getElementById('map');
 
@@ -118,6 +167,10 @@
 
      }
 
+           //====================================//
+
+
+            //           бургер меню
 
          $(function() {
              $('.menu__icon').on('click', function() {
@@ -126,50 +179,22 @@
              });
 
              $('.menu__links-item').on('click', function() {
-                 // do something
+
 
                  $(this).closest('.nav__menu')
                      .removeClass('menu_state_open');
              });
          });
 
-
-
-     // var Menu = {
-     //
-     //     el: {
-     //         ham: $('.menu'),
-     //         menuTop: $('.menu-top'),
-     //         menuMiddle: $('.menu-middle'),
-     //         menuBottom: $('.menu-bottom')
-     //     },
-     //
-     //     init: function() {
-     //         Menu.bindUIactions();
-     //     },
-     //
-     //     bindUIactions: function() {
-     //         Menu.el.ham
-     //             .on(
-     //                 'click',
-     //                 function(event) {
-     //                     Menu.activateMenu(event);
-     //                     event.preventDefault();
-     //                 }
-     //             );
-     //     },
-     //
-     //     activateMenu: function() {
-     //         Menu.el.menuTop.toggleClass('menu-top-click');
-     //         Menu.el.menuMiddle.toggleClass('menu-middle-click');
-     //         Menu.el.menuBottom.toggleClass('menu-bottom-click');
-     //     }
-     // };
-     //
-     // Menu.init();
+               //======================//
 
 
  });
+
+
+
+
+        //            функция скрола
 
  function onScroll(){
      var scrollPosition = $(document).scrollTop();
@@ -186,4 +211,5 @@
      });
  }
 
+            //===============================//
 
