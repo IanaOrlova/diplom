@@ -58,6 +58,20 @@
          prevArrow:'<img class="prev" src="img/left.png">',
          nextArrow:'<img class="next" src="img/right.png">',
          dots: true,
+         responsive: [
+
+             {
+                 breakpoint: 805,
+                 settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     arrows:false,
+
+
+                 }
+             },
+         ]
+
 
      });
 
@@ -78,18 +92,16 @@
 
                  }
              },
-             // {
-             //     breakpoint: 570,
-             //     settings: {
-             //         slidesToShow: 1,
-             //         slidesToScroll: 1,
-             //         arrows:false,
-             //
-             //     }
-             // },
+             {
+                 breakpoint: 500,
+                 settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     arrows:false,
 
 
-
+                 }
+             },
              ]
 
      });
@@ -102,6 +114,20 @@
          prevArrow:'<img class="prev" src="img/left.png">',
          nextArrow:'<img class="next" src="img/right.png">',
          dots: true,
+         responsive: [
+
+             {
+                 breakpoint: 805,
+                 settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     arrows:false,
+
+
+                 }
+             },
+         ]
+
 
      });
 
@@ -112,6 +138,20 @@
          prevArrow:'<img class="prev" src="img/left.png">',
          nextArrow:'<img class="next" src="img/right.png">',
          dots: true,
+         responsive: [
+
+             {
+                 breakpoint: 805,
+                 settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     arrows:false,
+
+
+                 }
+             },
+         ]
+
 
      });
 

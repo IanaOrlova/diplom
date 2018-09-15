@@ -1929,30 +1929,30 @@ footer{
 
 
 
-  .third {
-
-
-
-    .section__content {
-
-
-      .visible {
-
-        .prev {
-          @include prevArrow;
-         display: none;
-        }
-
-        .next {
-          @include nextArrow;
-         display: none;
-        }
-
-      }
-
-    }
-
-  }
+  //.third {
+  //
+  //
+  //
+  //  .section__content {
+  //
+  //
+  //    .visible {
+  //
+  //      .prev {
+  //        @include prevArrow;
+  //       display: none;
+  //      }
+  //
+  //      .next {
+  //        @include nextArrow;
+  //       display: none;
+  //      }
+  //
+  //    }
+  //
+  //  }
+  //
+  //}
 
 
 
@@ -2010,43 +2010,43 @@ footer{
 
   .seventh {
     height: 1250px;
-      .section__content {
-
-          .prev {
-            @include prevArrow;
-            display: none;
-          }
-
-          .next {
-            @include nextArrow;
-            display: none;
-          }
-
-
-
-      }
-
-  }
-
-  .eight {
-
-    .section__content {
-
-      .prev {
-        @include prevArrow;
-        display: none;
-      }
-
-      .next {
-        @include nextArrow;
-        display: none;
-      }
-
-
-
-    }
+      //.section__content {
+      //
+      //    .prev {
+      //      @include prevArrow;
+      //      display: none;
+      //    }
+      //
+      //    .next {
+      //      @include nextArrow;
+      //      display: none;
+      //    }
+      //
+      //
+      //
+      //}
 
   }
+
+  //.eight {
+  //
+  //  .section__content {
+  //
+  //    .prev {
+  //      @include prevArrow;
+  //      display: none;
+  //    }
+  //
+  //    .next {
+  //      @include nextArrow;
+  //      display: none;
+  //    }
+  //
+  //
+  //
+  //  }
+  //
+  //}
 
   .tenth{
 
