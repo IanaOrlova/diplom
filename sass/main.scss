@@ -85,27 +85,38 @@ a{
   background: url("../img/Баннер.png") no-repeat center;
   height: 1031px;
 
-  .display_flex{
+  .header_static{
     display: flex;
     justify-content: space-around;
-    padding-top: 16px;
+    padding-top: 31px;
     padding-bottom: 10px;
-    width: 1076px;
+    width: 1077px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
     @include header_menu;
 
     .nav__links{
+
       li{
         display: inline-block;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
       }
+
     }
+
+    //стиль под бургерт меню
+
 
     .nav__menu {
 
       .menu__links {
         display: none;
+
         li{
           display: inline-block;
         }
@@ -120,7 +131,6 @@ a{
       height: 35px;
       position: relative;
       cursor: pointer;
-
     }
 
     .menu__icon span {
@@ -137,7 +147,7 @@ a{
     }
 
     .menu__icon span:nth-child(1) {
-      top: 0px;
+      top: 0;
     }
 
     .menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
@@ -174,12 +184,9 @@ a{
       display: block;
     }
 
-
-
-
   }
 
-  .display_none {
+  .header_scroll {
     display: none;
     padding-top: 16px;
     padding-bottom: 10px;
@@ -199,15 +206,18 @@ a{
         @include header_menu;
 
         .nav__links{
+
           ul{ padding-top: 4px;
 
             li{
               display: inline-block;
             }
+
           }
 
         }
         .nav__menu{
+
           ul{
             padding-top: 5px;
 
@@ -226,14 +236,15 @@ a{
   .section__banner_img{
     display: flex;
     justify-content: space-around;
-    margin: -72px auto 0;
+    margin: -85px auto 0;
 
     .element_left{
       padding-top: 233px;
+
       img{
         display: block;
-
       }
+
     }
 
   }
@@ -244,24 +255,24 @@ a{
 
 .second{
   position: relative;
-  .element_absolute{
-
-  }
 
   h3{
     padding-top: 68px;
     position: relative;
     z-index: 2;
   }
+
   .content{
     padding-bottom: 195px;
     padding-top: 144px;
     position: relative;
+
     .one{
       position: absolute;
       bottom: -91px;
       left: -46px;
     }
+
     .two{
       position: absolute;
       top: -224px;
@@ -330,7 +341,7 @@ a{
 
   .section__content {
 
-     .hidden {
+     .third-section-hidden {
       display: block;
       position: relative;
       max-width: 1028px;
@@ -445,10 +456,10 @@ a{
 
     }
 
-    /*    на респонсив             */
+    /*    скрытый блок             */
 
 
-     .visible {
+     .third-section-visible {
       display: none;
       position: relative;
       max-width: 650px;
@@ -462,11 +473,15 @@ a{
         .element__container {
           background: rgba(9, 49, 81, 0.9);
           padding-top: 40px;
+
           .element__img{
+
             img{
               margin: 0 auto;
             }
+
           }
+
           .element__text {
             position: relative;
             text-align: left;
@@ -548,9 +563,11 @@ a{
 /*                                    fourth section           (white)                      */
 
 .fourth {
+
   h3 {
     padding-top: 85px;
   }
+
   .fourth-section-hidden {
     position: relative;
     display: flex;
@@ -558,11 +575,13 @@ a{
     margin: 0 auto;
     padding-top: 135px;
     padding-bottom: 64px;
+
     .one {
       position: absolute;
       top: -187px;
       left: 0;
     }
+
     .two {
       position: absolute;
       bottom: -188px;
@@ -598,7 +617,6 @@ a{
             line-height: 30px;
             color: white;
             padding-bottom: 11px;
-
           }
 
           p {
@@ -613,9 +631,11 @@ a{
         &:hover {
           transform: scale(1.1, 1.1);
           z-index: 2;
+
           h5 {
             color: $colorOne;
           }
+
         }
 
       }
@@ -623,6 +643,8 @@ a{
     }
 
   }
+
+          //  скрытый блок
 
   .fourth-section-visible {
     position: relative;
@@ -633,18 +655,20 @@ a{
 
     .section__slider__element {
       padding-bottom: 30px;
-
     }
 
       .content__element {
+
         .element__img {
           position: relative;
           top: 5px;
           left:0;
           z-index: 2;
+
           img{
             display: block;
           }
+
         }
 
         .element__background {
@@ -711,11 +735,6 @@ a{
 }
 
 
-
-
-
-
-
 /*                                     fifth section        (color)                         */
 
 .fifth{
@@ -726,11 +745,10 @@ a{
   h3{
     padding-top: 280px;
     color: white;
+    letter-spacing: 11px;
   }
 
   .section__content{
-
-
 
     &__container{
       display: flex;
@@ -743,14 +761,12 @@ a{
         top: 127px;
         left: 28px;
         box-shadow: -1px 3px 55px 4px rgba(0,0,0,0.75);
-
       }
+
       .content__text{
         background: rgba(9, 49, 81, 0.7);
-        padding-top: 41px;
-        padding-bottom: 41px;
-        padding-right:87px ;
-        padding-left: 217px;
+        padding:41px 87px 41px 217px ;
+
 
         p{
           position: relative;
@@ -804,6 +820,7 @@ a{
 /*                                                      sixth section     (white)                                            */
 
 .sixth{
+
   .section__content{
     position: relative;
     padding-top: 72px;
@@ -886,16 +903,13 @@ a{
 
       .element__text{
         background: #f1f1f1;
-        padding-bottom: 70px;
+        padding-bottom: 50px;
 
         h5{
           font-size: 36px;
           line-height: 30px;
           text-align: center;
-          padding-bottom: 101px;
-          padding-top: 63px;
-          padding-left: 89px;
-          padding-right: 105px;
+          padding: 63px 105px 67px 89px;
         }
 
         .element__link{
@@ -904,36 +918,38 @@ a{
          position: relative;
          margin-left: 70px;
          margin-right: 78px;
-         margin-bottom: 70px;
+         margin-bottom: 62px;
          transition: 0.5s;
          cursor: pointer;
          border-bottom: 1px solid black;
 
-         &:hover{
-           transform: scale(1.1, 1.1);
+           &:hover{
+             transform: scale(1.1, 1.1);
 
-           svg{
-             @include svg;
+             svg{
+               @include svg;
+             }
+
+           }
+
+           a{
+             display: inline-block;
+
+             svg path{
+               fill:#052F6A;
+               stroke:#052F6A;
+             }
+
+           }
+
+           p{
+             font-size: 24px;
+             line-height: 30px;
+             color: rgb(65,65,65);
+             padding-top: 27px;
            }
 
          }
-
-         a{
-           display: inline-block;
-           svg path{
-             fill:#052F6A;
-             stroke:#052F6A;
-           }
-         }
-
-         p{
-           font-size: 24px;
-           line-height: 30px;
-           color: rgb(65,65,65);
-           padding-top: 27px;
-         }
-
-       }
 
       }
 
@@ -1064,6 +1080,7 @@ a{
   h3{
     padding-top: 85px;
   }
+
   .section__content{
     padding-top: 135px;
     position: relative;
@@ -1108,6 +1125,7 @@ a{
               }
 
             }
+
             &:before {
               content: "";
               position: absolute;
@@ -1151,10 +1169,12 @@ a{
   background: url("../img/Баннер5.png") no-repeat center;
   background-size: cover;
   height: 1371px;
+
   h3{
     padding-top: 235px;
     color: white;
   }
+
   .section__content__container {
     padding-top: 89px;
 
@@ -1188,15 +1208,19 @@ a{
     .ba-width-2_4 {
       width: 50%;
     }
+
     .ba-width-3_4 {
       width: 75%;
     }
+
     .ba-width-1_3 {
       width: 33%;
     }
+
     .ba-width-2_3 {
       width: 67%;
     }
+
   }
 
   .content__element{
@@ -1207,22 +1231,23 @@ a{
     &:hover{
 
       .hover{
-        display: block;
         cursor: pointer;
-
+        opacity: 1;
+        transition: 0.5s;
       }
 
     }
 
     .hover{
-      display: none;
+      display: block;
       position: absolute;
       background: rgba(31, 31, 31, 0.5);
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-
+      opacity: 0;
+      transition:0.5s;
 
       a{
         position: absolute;
@@ -1297,8 +1322,8 @@ a{
           padding-bottom: 20px;
         }
 
-
       }
+
       .container-text__img{
         position: relative;
         max-width: 239px;
@@ -1310,6 +1335,7 @@ a{
           color: black;
           margin-bottom: 30px;
         }
+
         .top__img{
           position: absolute;
           right: -50px;
@@ -1334,10 +1360,7 @@ a{
           font-size: 24px;
           line-height: 30px;
           text-align: center;
-          padding-bottom:33px;
-          padding-top: 33px;
-          padding-left: 93px;
-          padding-right: 91px;
+          padding: 33px 91px 33px 93px;
         }
 
         .element__link {
@@ -1392,11 +1415,13 @@ a{
 
 footer{
   background: #022b49;
+
   .element__container {
     padding-top: 45px;
     padding-bottom: 45px;
     display: flex;
     justify-content: space-around;
+
     li {
       margin-left: 10px;
       margin-right: 10px;
@@ -1406,15 +1431,17 @@ footer{
 
       &:hover {
         cursor: pointer;
+
         svg {
           @include svg;
         }
+
       }
 
     }
+
     .footer__element {
       position: relative;
-
 
       p {
         font-size: 14px;
@@ -1428,6 +1455,7 @@ footer{
         }
 
       }
+
       .element__img {
         position: absolute;
         left: -5px;
@@ -1464,11 +1492,8 @@ footer{
 
     .section__content {
 
-       .display_none {
-        display: none!important;
-      }
 
-      .display_flex{
+      .header_static{
         width: auto;
       }
 
@@ -1528,9 +1553,11 @@ footer{
           margin-bottom: 16px;
           margin-right: 8px;
           margin-left: 8px;
+
           &:last-child{
             margin-right: 8px;
           }
+
         }
 
       }
@@ -1545,11 +1572,11 @@ footer{
 
     .section__content {
 
-      .hidden{
+      .third-section-hidden{
         display: none;
       }
 
-      .visible{
+      .third-section-visible{
         display: block;
       }
 
@@ -1564,10 +1591,9 @@ footer{
     h3{
       padding-top: 0;
     }
+
     .fourth-section-hidden {
-
       display: none;
-
 
       .one {
         display: none;
@@ -1583,10 +1609,8 @@ footer{
     .fourth-section-visible{
       display: block;
     }
+
   }
-
-
-
 
 
   .fifth{
@@ -1607,10 +1631,7 @@ footer{
         }
         .content__text{
           background: rgba(9, 49, 81, 0.7);
-          padding-top: 41px;
-          padding-bottom: 41px;
-          padding-right:0 ;
-          padding-left: 228px;
+          padding: 41px 0 41px 228px;
 
         }
 
@@ -1638,6 +1659,7 @@ footer{
             position: relative;
             display: block;
             padding-bottom: 23px;
+
             .element__text{
               position: relative;
             }
@@ -1698,12 +1720,16 @@ footer{
             padding-top: 10px;
             padding-bottom: 53px;
             padding-left: 15px;
+
             .element__img{
               margin-bottom: 60px;
+
               img {
                 margin: 0 auto;
               }
+
             }
+
             .element__text {
               padding-left: 20px;
               border-left: 2px solid $colorOne;
@@ -1711,7 +1737,6 @@ footer{
 
               &:before {
                 content: none;
-
               }
 
             }
@@ -1723,6 +1748,7 @@ footer{
       }
 
     }
+
     .prev {
       @include prevArrow;
       bottom: 142px;
@@ -1733,9 +1759,7 @@ footer{
       bottom: 147px;
     }
 
-
   }
-
 
   .tenth{
 
@@ -1762,9 +1786,9 @@ footer{
         justify-content: space-around;
         padding-bottom: 50px;
       }
+
       .right_top{
         position: relative;
-
 
         &__img{
           position: absolute;
@@ -1787,11 +1811,12 @@ footer{
 
     .section__content{
 
-      .display_flex{
+      .header_static{
 
         .header__logo{
           display: none;
         }
+
         .nav__menu{
 
           ul{
@@ -1802,15 +1827,23 @@ footer{
               }
 
             }
+
           }
+
         }
+
       }
 
     }
+
   }
 
   .sixth{
     display: none;
+  }
+
+  .seventh{
+    margin-top: -250px;
   }
 
   .ninth{
@@ -1832,15 +1865,15 @@ footer{
       max-width: 353px;
       padding-top: 95px;
       padding-bottom: 64px;
-
     }
+
   }
 
 }
 
 
 
-@media all and (min-width: 805px){
+@media all and (min-width: 806px){
 
     .nav__menu {
 
@@ -1866,17 +1899,15 @@ footer{
 
     .section__content{
 
-      .display_flex {
+      .header_static {
         flex-direction: row-reverse;
         justify-content: space-between;
+        padding-top: 23px;
         padding-right: 30px;
         padding-left: 30px;
 
-
-
-
         .nav__links{
-          padding-top: 15px;
+          padding-top: 5px;
         }
 
         .nav__menu {
@@ -1890,23 +1921,23 @@ footer{
           .menu__links{
               position: absolute;
               z-index: 2;
-              top: 63px;
+              top: 69px;
               right: 0;
-               background: rgba(9, 49, 81, 0.9);
+              background: rgba(9, 49, 81, 0.9);
               width: 100%;
               padding: 0;
+
             li{
               display: block;
             }
+
             .menu__links-item {
               display: block;
               text-align: center;
               color: #ffffff;
-                padding: 28px 0;
-                font-size: 24px;
-                border-bottom:1px solid #0c5075 ;
-
-
+              padding: 28px 0;
+              font-size: 24px;
+              border-bottom:1px solid #0c5075 ;
             }
 
           }
@@ -1927,35 +1958,6 @@ footer{
 
   }
 
-
-
-  //.third {
-  //
-  //
-  //
-  //  .section__content {
-  //
-  //
-  //    .visible {
-  //
-  //      .prev {
-  //        @include prevArrow;
-  //       display: none;
-  //      }
-  //
-  //      .next {
-  //        @include nextArrow;
-  //       display: none;
-  //      }
-  //
-  //    }
-  //
-  //  }
-  //
-  //}
-
-
-
   .fifth{
 
     .section__content{
@@ -1969,8 +1971,8 @@ footer{
 
         .content__img{
           display: none;
-
         }
+
         .content__text{
           padding-left: 61px;
 
@@ -2010,43 +2012,7 @@ footer{
 
   .seventh {
     height: 1250px;
-      //.section__content {
-      //
-      //    .prev {
-      //      @include prevArrow;
-      //      display: none;
-      //    }
-      //
-      //    .next {
-      //      @include nextArrow;
-      //      display: none;
-      //    }
-      //
-      //
-      //
-      //}
-
   }
-
-  //.eight {
-  //
-  //  .section__content {
-  //
-  //    .prev {
-  //      @include prevArrow;
-  //      display: none;
-  //    }
-  //
-  //    .next {
-  //      @include nextArrow;
-  //      display: none;
-  //    }
-  //
-  //
-  //
-  //  }
-  //
-  //}
 
   .tenth{
 
@@ -2073,15 +2039,14 @@ footer{
 
         }
 
-
         .container-text__img {
           margin: 0 auto;
           max-width: none;
 
-
           .top__img {
             right: 6px;
           }
+
         }
 
       }
@@ -2096,6 +2061,7 @@ footer{
               padding-left: 60px;
               padding-right: 60px;
             }
+
           }
 
       }
@@ -2105,14 +2071,16 @@ footer{
   }
 
   footer{
+
     .element__container{
+
       .logo{
         display: none;
       }
+
     }
 
   }
-
 
 }
 
@@ -2130,11 +2098,12 @@ footer{
 
         .element_left {
           padding-top: 80px;
+
           img {
             display: block;
             width: 100%;
-
           }
+
         }
 
       }
@@ -2143,17 +2112,13 @@ footer{
 
   }
 
-
-
-
-
-
-
   footer{
+
     .element__container{
       padding: 10px 0;
       display: block;
       max-width: 160px;
+
       .footer__element{
         padding-bottom: 10px;
         padding-top: 10px;
@@ -2163,6 +2128,7 @@ footer{
         }
 
         &:nth-child(2){
+
           p{
             margin-left: 10px;
           }
@@ -2181,6 +2147,7 @@ footer{
         }
 
       }
+
       ul{
         text-align: center;
         padding-bottom: 10px;
@@ -2190,32 +2157,8 @@ footer{
 
   }
 
-
 }
 
-
-@media all and (max-width: 500px){
-
-  .fourth{
-
-    .fourth-section-visible {
-
-      .prev {
-              @include prevArrow;
-              display: none;
-            }
-
-            .next {
-              @include nextArrow;
-              display: none;
-            }
-
-    }
-
-  }
-
-
-}
 
 @media all and  (max-width: 400px) {
 
@@ -2248,13 +2191,17 @@ h3{
 
         .element__img {
           top: 0;
+
           img{
             width: 100%;
             display: block;
           }
+
         }
+
         .element__background{
           padding-bottom: 20px;
+
           img{
             width: 100%;
             display: block;
@@ -2265,29 +2212,22 @@ h3{
             top: 30px;
             bottom: 15px;
             padding-right: 8px;
-
-
            }
+
         }
 
       }
 
     }
+
   }
 
   .second {
     position: relative;
-    .element_absolute {
-
-    }
-
 
     .content {
 
-
-
       .content__row {
-
 
         .row__element {
 
@@ -2295,30 +2235,39 @@ h3{
             width: 100%;
             display: block;
           }
+
           .row__element__text{
+
             img{
               display: block;
               max-width: 112px;
-              max-height: 94px;
+              max-height: 100px;
               margin: 0 auto;
             }
+
           }
 
           &:hover {
             transform: none;
             z-index: 2;
           }
+
         }
+
       }
+
     }
+
   }
+
   .fifth{
+
     h3{
       padding-top: 220px;
+      padding-left: 34px;
+      padding-right: 10px;
     }
+
   }
-
-
-
 
 }

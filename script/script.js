@@ -42,7 +42,7 @@
 
      //              слайдер
 
-     $('.third .hidden').slick({
+     $('.third-section-hidden').slick({
          infinite: false,
          slidesToShow: 1,
          slidesToScroll: 1,
@@ -51,7 +51,7 @@
 
      });
 
-     $('.third .visible').slick({
+     $('.third-section-visible').slick({
          infinite: false,
          slidesToShow: 1,
          slidesToScroll: 1,
@@ -161,10 +161,10 @@
         //          всплывающее меню
 
 
-     var bloc = document.querySelector('.display_none');
+     var bloc = document.querySelector('.header_scroll');
 
      window.onscroll = function () {
-         if(scrollY>=1031){
+         if(scrollY>=1031&&innerWidth>=1199){
              bloc.style.display = "flex"
          }else {bloc.style.display = "none"}
 

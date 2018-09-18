@@ -16,22 +16,19 @@
    <body>
    <section id="top" class="first section">
            <div class="section__content container">
-               <header class="display_flex">
+               <header class="header_static">
                    <div class="header__logo">
                        <img src="img/LogoVdohOut1.png" alt="logo" />
                    </div>
-
-
                    <nav class="nav__menu">
-
+                       <!--кнопка под респонсивное меню-->
                        <div class="menu__icon">
                            <span></span>
                            <span></span>
                            <span></span>
                            <span></span>
                        </div>
-
-
+                       <!--==============================-->
                        <ul id="top-menu" class="menu__links">
                            <li><a href="#top" class="menu__links-item"> Главная</a></li>
                            <li><a href="#aboutUs" class="menu__links-item">О нас</a> </li>
@@ -41,8 +38,6 @@
                            <li><a href="#gallery" class="menu__links-item"> Галерея</a></li>
                            <li><a href="#contacts" class="menu__links-item">Контакты</a></li>
                        </ul>
-
-
                    </nav>
                    <div class="nav__links">
                        <ul>
@@ -103,7 +98,7 @@
                        </ul>
                    </div>
                </header>
-               <header class="display_none">
+               <header class="header_scroll">
                    <div class="container">
                    <div class="header__logo">
                        <img src="img/LogoVdohOut1.png" alt="logo" />
@@ -192,7 +187,6 @@
 
    <!--//==========================================================================================================//-->
    <section id="aboutUs" class="second section">
-
        <h3>В нашей студии</h3>
        <div class="content container">
            <div class="element_absolute one">
@@ -254,7 +248,7 @@
    <section class="third section">
        <h3>Наши тренера</h3>
        <div class="section__content">
-           <div class="section__slider hidden">
+           <div class="section__slider third-section-hidden">
                <div class="section__slider__element">
                    <div class="element__container">
                        <div class="element_img">
@@ -323,11 +317,9 @@
                </div>
            </div>
 
-                          <!--на респонсив-->
+                          <!--скрытый блок -->
 
-
-
-           <div class="section__slider visible">
+           <div class="section__slider third-section-visible">
                <div class="section__slider__element">
                    <div class="element__container">
                        <div class="element__img">
@@ -449,7 +441,7 @@
                     </div>
                 </div>
             </div>
-                                                        <!--респонив-->
+                                                        <!--скрытый блок-->
 
        <div class="section__content container fourth-section-visible">
            <div class="section__slider__element">
@@ -498,7 +490,6 @@
            </div>
            </div>
        </div>
-
    </section>
 
    <!--//===============================================================================================================//-->
@@ -753,7 +744,9 @@
             </div>
         </div>
     </section>
+
    <!--//===================================================================================================================//-->
+
    <section id="reviews" class="eight section">
        <h3>Отзывы</h3>
        <div class="section__content container">
@@ -1139,8 +1132,6 @@
 
             </div>
    </footer>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-mhgXDgz02YEMMH0vU8s4N4nQB9rzda4"></script>
