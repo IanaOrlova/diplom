@@ -257,6 +257,16 @@
          }
      });
 
+     var elements = $('.modal-overlay, .modal');
+
+     $('button').click(function(){
+         elements.addClass('active1');
+     });
+
+     $('.close-modal').click(function(){
+         elements.removeClass('active1');
+     });
+
 
  });
 

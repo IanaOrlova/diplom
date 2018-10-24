@@ -1,3 +1,7 @@
 $colorOne: #e19a00;
 $colorTwo: rgb(207,228,247);
 
+$button-bg: transparent;
+$speed: 0.6s;
+$delay: ($speed * .5);
+$easing: cubic-bezier(.55,0,.1,1);
