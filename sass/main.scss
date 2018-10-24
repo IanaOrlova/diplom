@@ -1041,6 +1041,15 @@ a{
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.25s $easing;
+    &:before{
+      content: "";
+      position: absolute;
+      background: black;
+      height: 1px;
+      width: 161px;
+      bottom: 22px;
+    }
+
 
     &:hover {
       background: darken($button-bg, 3%);
