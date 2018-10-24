@@ -827,6 +827,7 @@ a{
 /*                                                      sixth section     (white)                                            */
 
 .sixth{
+  padding-top: 60px;
 
   .section__content{
     position: relative;
@@ -846,124 +847,187 @@ a{
       bottom: -164px;
       right: 90px;
     }
+    .accordion-container{
+      position: relative;
+      max-width: 1170px;
+      height: auto;
+      margin: 10px auto;
+    }
 
-    .left{
+    .set{
+      position: relative;
+      height: auto;
+      min-width: 1200px;
 
-      .element__text__header{
+      p{
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: #e19a00;
+        font-weight: 800;
+        display: block;
+        padding: 16px 32% 16px 34%;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+        transition:all 0.2s linear;
+        background: url("../img/ФОН_высокий.png") no-repeat center;
+        background-size: cover;
         position: relative;
+        //text-align: center;
 
-        p{
-          font-size: 48px;
 
-          span{
-            font-family: "Scriptorama",sans-serif;
-            font-size: 72px;
-            letter-spacing: 14px;
-          }
-
+        span {
+          font-size: 22px;
+          line-height: 30px;
+          color: $colorTwo;
+          font-weight: 400;
         }
-        .header__img{
+        i{
+          font-size: 35px;
+          letter-spacing: 2px;
+          line-height: 30px;
+          color: $colorTwo;
           position: absolute;
-          top: 99px;
-          right: -10px;
+          right: 0;
+          top: 0;
+          padding: 18px 20px;
+          background: rgba(9, 49, 81, 0.2);
+        }
+        &:hover{
+          cursor: pointer;
+          i{
+            color: $colorOne;
+          }
+        }
+      }
+      &:nth-child(2){
+        p{
+          background: url("../img/Фон_низкий.png")no-repeat center;
+          background-size: cover;
         }
 
       }
-
-      .element__text__body{
-        padding-top: 128px;
-        position: relative;
-        padding-left: 18px;
-
+      &:nth-child(3){
         p{
-          max-width: 280px;
-          font-size: 24px;
-          font-weight: bold;
-
-          &:last-child{
-            max-width: 315px;
-            font-size: 24px;
-            font-weight: normal;
-            padding-top: 44px;
-          }
-
+          background: url("../img/Фон_Релакс.png")no-repeat center;
+          background-size: cover;
         }
 
-        &:before{
-          content: "";
-          position: absolute;
-          transform: rotate(90deg);
-          height: 2px;
-          width: 186px;
-          background: #e19a00;
-          bottom: 88px;
-          left: -89px;
+      }
+      &:nth-child(4){
+        p{
+          background: url("../img/Фон_Хатха.png")no-repeat center;
+          background-size: cover;
+        }
+
+      }
+      &:nth-child(5){
+        p{
+          background: url("../img/Фон_Цигун.png")no-repeat center;
+          background-size: cover;
+        }
+
+      }
+      &:nth-child(6){
+        p{
+          background: url("../img/Фон_Цигун1.png")no-repeat center;
+          background-size: cover;
+        }
+
+      }
+      &:nth-child(7){
+        p{
+          background: url("../img/Фон_Индивидуальн.png")no-repeat center;
+          background-size: cover;
         }
 
       }
 
     }
-    .right{
-      background: url("../img/big_contacts.png");
-      background-size: cover;
-      padding: 30px;
 
-      .element__text{
-        background: #f1f1f1;
-        padding-bottom: 50px;
+    .content{
+      background-color: #fff;
+      display:none;
 
-        h5{
-          font-size: 36px;
-          line-height: 30px;
-          text-align: center;
-          padding: 63px 105px 67px 89px;
+      .row{
+        display: flex;
+        background: url("../img/пн.png")no-repeat center;
+        background-size: cover;
+        border: none;
+        flex-wrap: wrap;
+        p{
+          background: none;
+          border: none;
+          font-size: 20px;
+          padding: 20px 9px;
+          margin: 0;
+          color: #595959;
+          letter-spacing: 1px;
+          span{
+            color:#c1cdd7;
+            line-height: 0;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+          }
+          &:nth-child(2){
+            padding: 20px 5px 20px 25px;
+          }
+        }
+        .white{
+          color:#c1cdd7;
+          line-height: 23px;
+          font-size: 20px;
+          font-weight: 800;
+          letter-spacing: 1px;
         }
 
-        .element__link{
-         display: flex;
-         justify-content: space-between;
-         position: relative;
-         margin-left: 70px;
-         margin-right: 78px;
-         margin-bottom: 62px;
-         transition: 0.5s;
-         cursor: pointer;
-         border-bottom: 1px solid black;
-
-           &:hover{
-             transform: scale(1.1, 1.1);
-
-             svg{
-               @include svg;
-             }
-
-           }
-
-           a{
-             display: inline-block;
-
-             svg path{
-               fill:#052F6A;
-               stroke:#052F6A;
-             }
-
-           }
-
-           p{
-             font-size: 24px;
-             line-height: 30px;
-             color: rgb(65,65,65);
-             padding-top: 27px;
-           }
-
-         }
-
+        .day{
+          color: #e19a00;
+          background: rgba(9, 49, 81, 0.2);
+        }
+        &:nth-child(2){
+          background: url("../img/вт.png")no-repeat center;
+           background-size: cover;
+        }
+        &:nth-child(3){
+          background: url("../img/ср.png")no-repeat center;
+          background-size: cover;
+        }
+        &:nth-child(4){
+          background: url("../img/чт.png")no-repeat center;
+          background-size: cover;
+        }
+        &:nth-child(5){
+          background: url("../img/пт.png")no-repeat center;
+          background-size: cover;
+        }
+        &:nth-child(6){
+          background: url("../img/сб.png")no-repeat center;
+          background-size: cover;
+        }
+        .mon{
+          padding: 20px 17px;
+        }
+        .tue{
+          padding: 20px 20px 20px 19px;
+        }
+        .wed{
+          padding: 20px  19px 20px 18px;
+        }
+        .thu{
+          padding: 20px 19px;
+        }
+        .fr{
+          padding: 20px 19px 20px 18px;
+        }
+        .sat{
+          padding: 20px 19px 20px 18px ;
+        }
       }
 
     }
 
   }
-
 }
 
 /*                                                      seventh section        (color)                                       */
@@ -1493,32 +1557,29 @@ footer{
 
 @media all and  (max-width: 1199px) {
 
-
   .first {
-
 
     .section__content {
 
-
-      .header_static{
+      .header_static {
         width: auto;
       }
 
-      .section__banner_img{
+      .section__banner_img {
         display: block;
         margin: 0 auto;
         text-align: center;
 
-        .element_left{
+        .element_left {
           padding-top: 180px;
 
-          img{
+          img {
             margin: 0 auto;
           }
 
         }
 
-        .element-right{
+        .element-right {
           display: none;
         }
 
@@ -1531,7 +1592,7 @@ footer{
   .second {
     margin-top: -20px;
 
-    h3{
+    h3 {
       padding-top: 0;
     }
 
@@ -1544,7 +1605,7 @@ footer{
         display: none;
       }
 
-      .two{
+      .two {
         display: none;
       }
 
@@ -1561,7 +1622,7 @@ footer{
           margin-right: 8px;
           margin-left: 8px;
 
-          &:last-child{
+          &:last-child {
             margin-right: 8px;
           }
 
@@ -1573,17 +1634,16 @@ footer{
 
   }
 
-
   .third {
     margin-top: -50px;
 
     .section__content {
 
-      .third-section-hidden{
+      .third-section-hidden {
         display: none;
       }
 
-      .third-section-visible{
+      .third-section-visible {
         display: block;
       }
 
@@ -1591,11 +1651,10 @@ footer{
 
   }
 
-
   .fourth {
     margin-top: -70px;
 
-    h3{
+    h3 {
       padding-top: 0;
     }
 
@@ -1610,33 +1669,31 @@ footer{
         display: none;
       }
 
-
     }
 
-    .fourth-section-visible{
+    .fourth-section-visible {
       display: block;
     }
 
   }
 
-
-  .fifth{
+  .fifth {
     margin-top: -80px;
 
-    .section__content{
+    .section__content {
 
-      &__container{
+      &__container {
         display: block;
         padding-top: 57px;
         max-width: 700px;
         margin: 0 auto;
         position: relative;
 
-        .content__img{
+        .content__img {
           display: none;
 
         }
-        .content__text{
+        .content__text {
           background: rgba(9, 49, 81, 0.7);
           padding: 41px 0 41px 228px;
 
@@ -1648,8 +1705,78 @@ footer{
 
   }
 
+  .sixth {
+    margin-top: -66px;
+    h3{
+      padding-top: 0;
+    }
+
+    .section__content {
+      .one {
+        display: none;
+      }
+      .two {
+        display: none;
+      }
+
+
+        .set {
+          min-width: auto;
+          p {
+            font-size: 25px;
+            letter-spacing: 2px;
+            padding: 16px 33.3%;
+
+            i {
+              padding: 15px 20px;
+            }
+
+          }
+        }
+        .row {
+          flex-wrap: wrap;
+          p {
+            font-size: 20px;
+            padding: 20px 9px;
+            display: none;
+            &:nth-child(2) {
+              padding: 20px 5px 20px 10px;
+            }
+          }
+
+          .white {
+            display: block;
+            color: #c1cdd7;
+            line-height: 21px;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            span {
+              display: block;
+            }
+          }
+
+          .day {
+            color: #e19a00;
+            background: rgba(9, 49, 81, 0.2);
+            display: block;
+          }
+
+        }
+
+
+
+    }
+
+
+
+
+}
+
 
   .seventh{
+    margin-top: -46px;
 
     .section__content{
       padding-top: 208px;
@@ -1844,15 +1971,9 @@ footer{
     }
 
   }
-
   .sixth{
-    display: none;
+    margin-top: -142px;
   }
-
-  .seventh{
-    margin-top: -250px;
-  }
-
   .ninth{
     display: none;
   }
@@ -1862,6 +1983,27 @@ footer{
   }
 
 }
+
+@media all and  (max-width: 970px) {
+  .sixth {
+    .section__content {
+      .set {
+        p {
+          font-size: 25px;
+          letter-spacing: 2px;
+          padding: 16px 26.3% 16px 20%;
+          text-align: left;
+          i{
+            padding: 15px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 
 @media all and (max-width: 900px){
 
@@ -2090,6 +2232,23 @@ footer{
   }
 
 }
+@media all and  (max-width: 610px) {
+  .sixth {
+    .section__content {
+      .set {
+        p {
+          font-size: 25px;
+          letter-spacing: 2px;
+          padding: 16px 26.3% 16px 10%;
+          i{
+            padding: 15px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 @media all and  (max-width: 600px) {
 
@@ -2165,9 +2324,66 @@ footer{
   }
 
 }
-
+@media all and  (max-width: 520px) {
+  .sixth {
+    .section__content {
+      .set {
+        p {
+          font-size: 20px;
+          letter-spacing: 2px;
+          padding: 16px 26.3% 16px 5%;
+          text-align: left;
+          i{
+            padding: 11px 20px;
+          }
+          span{
+            font-size: 16px;
+          }
+        }
+        .row{
+          .white{
+            font-size: 15px;
+            padding: 19px 5px;
+            line-height: 15px;
+          }
+          .day{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media all and  (max-width: 400px) {
+
+  .sixth {
+    .section__content {
+      .set {
+        p {
+          font-size: 15px;
+          letter-spacing: 2px;
+          padding: 16px 26.3% 16px 5%;
+          text-align: left;
+          i{
+            padding: 10px 18px;
+            font-size: 25px;
+          }
+          span{
+            font-size: 14px;
+          }
+        }
+        .row{
+          p{
+            font-size: 15px;
+            span{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
 
 h3{
   letter-spacing: 9px;

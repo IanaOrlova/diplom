@@ -231,6 +231,33 @@
                //======================//
 
 
+     $(".set > p").on("click", function() {
+         if ($(this).hasClass("active")) {
+             $(this).removeClass("active");
+             $(this)
+                 .siblings(".content")
+                 .slideUp(200);
+             $(".set > p i")
+                 .removeClass("fa-times")
+                 .addClass("fa-angle-down");
+         } else {
+             $(".set > p i")
+                 .removeClass("fa-times")
+                 .addClass("fa-angle-down");
+             $(this)
+                 .find("i")
+                 .removeClass("fa-angle-down")
+                 .addClass("fa-times");
+             $(".set > p").removeClass("active");
+             $(this).addClass("active");
+             $(".content").slideUp(200);
+             $(this)
+                 .siblings(".content")
+                 .slideDown(200);
+         }
+     });
+
+
  });
 
 
