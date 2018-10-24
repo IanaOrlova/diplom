@@ -857,7 +857,7 @@ a{
     .set{
       position: relative;
       height: auto;
-      min-width: 1200px;
+      min-width: 1170px;
 
       p{
         font-size: 30px;
@@ -970,7 +970,7 @@ a{
             letter-spacing: 1px;
           }
           &:nth-child(2){
-            padding: 20px 5px 20px 25px;
+            padding: 20px 5px 20px 12px;
           }
         }
         .white{
@@ -2374,6 +2374,15 @@ footer{
           }
         }
         .row{
+          .day{
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+          .white{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 3px;
+          }
           p{
             font-size: 15px;
             span{
