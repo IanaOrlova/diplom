@@ -872,12 +872,11 @@ a{
         background: url("../img/ФОН_высокий.png") no-repeat center;
         background-size: cover;
         position: relative;
-        //text-align: center;
+
 
 
         span {
           font-size: 22px;
-          line-height: 30px;
           color: $colorTwo;
           font-weight: 400;
         }
@@ -970,7 +969,7 @@ a{
             letter-spacing: 1px;
           }
           &:nth-child(2){
-            padding: 20px 5px 20px 12px;
+            padding: 20px 5px 20px 6px;
           }
         }
         .white{
@@ -983,6 +982,7 @@ a{
 
         .day{
           color: #e19a00;
+
           background: rgba(9, 49, 81, 0.2);
         }
         &:nth-child(2){
@@ -2348,6 +2348,24 @@ footer{
           }
           .day{
             font-size: 15px;
+          }
+          .mon{
+            padding: 16px;
+          }
+          .tue{
+            padding: 16px 18px;
+          }
+          .wed{
+            padding: 16px  17px 16px 18px ;
+          }
+          .thu{
+            padding: 16px 17px 16px 18px;
+          }
+          .fr{
+            padding: 16px 16px 16px 18px;
+          }
+          .sat{
+            padding: 16px 17px 16px 18px ;
           }
         }
       }
