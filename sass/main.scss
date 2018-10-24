@@ -1106,7 +1106,7 @@ a{
     .close-modal {
       position: absolute;
       cursor: pointer;
-      top: 5px;
+      top: -4px;
       right: 15px;
       opacity: 0;
       backface-visibility: hidden;
@@ -1140,6 +1140,9 @@ a{
         opacity: 1;
       }
     }
+  }
+  .close{
+    padding: 7px;
   }
 
   .first_block{
