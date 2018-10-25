@@ -1395,6 +1395,7 @@ a{
 
   .slick-dots{
     @include dots;
+    bottom: 9px;
   }
 
 }
