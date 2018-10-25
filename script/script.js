@@ -235,7 +235,7 @@
          if ($(this).hasClass("active2")) {
              $(this).removeClass("active2");
              $(this)
-                 .siblings(".content")
+                 .siblings(".content1")
                  .slideUp();
              $(".set > p i")
                  .removeClass("fa-times")
@@ -250,9 +250,9 @@
                  .addClass("fa-times");
              $(".set > p").removeClass("active2");
              $(this).addClass("active2");
-             $(".content").slideUp();
+             $(".content1").slideUp();
              $(this)
-                 .siblings(".content")
+                 .siblings(".content1")
                  .slideDown();
          }
      });
