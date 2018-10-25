@@ -232,11 +232,11 @@
 
 
      $(".set > p").on("click", function() {
-         if ($(this).hasClass("active")) {
-             $(this).removeClass("active");
+         if ($(this).hasClass("active2")) {
+             $(this).removeClass("active2");
              $(this)
                  .siblings(".content")
-                 .slideUp(200);
+                 .slideUp();
              $(".set > p i")
                  .removeClass("fa-times")
                  .addClass("fa-angle-down");
@@ -248,18 +248,18 @@
                  .find("i")
                  .removeClass("fa-angle-down")
                  .addClass("fa-times");
-             $(".set > p").removeClass("active");
-             $(this).addClass("active");
-             $(".content").slideUp(200);
+             $(".set > p").removeClass("active2");
+             $(this).addClass("active2");
+             $(".content").slideUp();
              $(this)
                  .siblings(".content")
-                 .slideDown(200);
+                 .slideDown();
          }
      });
 
      var elements = $('.modal-overlay, .modal');
 
-     $('button').click(function(){
+     $('.button1').click(function(){
          elements.addClass('active1');
      });
 
