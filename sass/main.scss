@@ -1658,6 +1658,15 @@ footer{
     padding-bottom: 45px;
     display: flex;
     justify-content: space-around;
+    .webteam{
+      color: white;
+      &:hover{
+        a{
+          transition: 0.5s;
+          color: $colorOne;
+        }
+      }
+    }
 
     li {
       margin-left: 10px;
@@ -2545,6 +2554,15 @@ footer{
       padding: 10px 0;
       display: block;
       max-width: 160px;
+      .webteam{
+        padding-top: 7px;
+        padding-left: 28px;
+        a{
+          position: relative;
+          left: -7px;
+        }
+
+      }
 
       .footer__element{
         padding-bottom: 10px;
