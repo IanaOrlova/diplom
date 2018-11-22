@@ -2440,9 +2440,7 @@ footer{
 
 @media all and  (max-width: 600px) {
 
-  .first{
-    background: #0c5075;
-  }
+
   .third{
     background: #0c5075;
   }
@@ -2452,7 +2450,8 @@ footer{
   }
 
   .first{
-
+    background: #0c5075;
+    height: 660px;
     .section__content{
 
       .section__banner_img {
@@ -2472,7 +2471,34 @@ footer{
     }
 
   }
+
+  .second{
+    margin-top: 40px;
+  }
+
+  .third{
+    margin-top: 50px;
+    height: 860px;
+    h3{
+      padding-top: 72px;
+    }
+  }
+
+  .fourth{
+    margin-top: 70px;
+  }
+
+  .fifth{
+    background: #0c5075;
+    height: 900px;
+    margin-top: 40px;
+    h3{
+      padding-top: 50px;
+    }
+  }
+
   .sixth{
+    margin-top: 51px;
     .first_block{
       .quantity{
         padding-top: 105px;
@@ -2495,6 +2521,22 @@ footer{
         font-size: 15px;
       }
     }
+  }
+
+  .seventh{
+    background: #0c5075;
+    margin-top: 67px;
+    height: 900px;
+    .section__content{
+      padding-top: 60px;
+      .section__slider{
+        padding-top: 60px;
+      }
+    }
+  }
+
+  .eight{
+    margin-top: 60px;
   }
 
   footer{
@@ -2764,7 +2806,7 @@ h3{
   .fifth{
 
     h3{
-      padding-top: 220px;
+
       padding-left: 34px;
       padding-right: 10px;
     }
