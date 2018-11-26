@@ -201,6 +201,7 @@
              zoom: 17,
              zoomControl:false,
              disableDefaultUI: true,
+
              //
          };
 
